@@ -10,6 +10,11 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -18,6 +23,6 @@
         </Grid.ColumnDefinitions>
         <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="98" Width="82" Grid.Column="0" Grid.Row="0"/>
         <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="98" Width="82" Grid.Column="1" Grid.Row="0"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Stretch"  Width="120"/>
     </Grid>
 </Window>
