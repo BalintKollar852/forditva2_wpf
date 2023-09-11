@@ -14,20 +14,29 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="0" VerticalAlignment="Top" Grid.Column="0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="0"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Szöveg:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="0" VerticalAlignment="Top" Grid.Column="0" Height="26" Width="50"/>
+        <Label Content="Szöveg fordítva:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Height="25" Width="94"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="15"/>
+        <Label Content="Szó:" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="30"/>
+        <Label Content="Szó fordítva:" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Width="76"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="15"/>
+        <Label Content="Szám:" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="26" Width="40"/>
+        <Label Content="Szám recipoka:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="0" Height="25" Width="89"/>
+        <Label Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="15"/>
+        <Label Content="Kép:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Grid.Column="0" Height="26" Width="33"/>
+        <TextBox Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Height="22" Margin="0,0,1,0"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="95"/>
+        <CheckBox Grid.Column="2" Content="Szavanként:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="False" Height="15" Width="82"/>
+        <Button Grid.Column="2" Content="Fordítva!" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="7" VerticalAlignment="Top" RenderTransformOrigin="-0.118,-0.246" Width="72" Height="19"/>
+        <ListBox Grid.Column="1" Grid.Row="4" d:ItemsSource="{d:SampleData ItemCount=5}" Height="23" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>
