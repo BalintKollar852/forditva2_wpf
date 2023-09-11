@@ -15,14 +15,19 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="98" Width="82" Grid.Column="0" Grid.Row="0"/>
-        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="98" Width="82" Grid.Column="1" Grid.Row="0"/>
-        <TextBox Grid.Column="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Stretch"  Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="0" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.Column="0"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="0"/>
     </Grid>
 </Window>
