@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace forditva2
 {
@@ -27,7 +28,31 @@ namespace forditva2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //Szöveg
+            if (Szavankent.IsChecked == true)
+            {
 
+                string anyad = Szoveg_Input.Text.ToString();
+                string[] anyad_splitted = anyad.Split(' ');
+                string csabakurva = String.Empty;
+                foreach (var item in anyad_splitted)
+                {
+                    char[] csabikurvageci = item.ToCharArray();
+                    Array.Reverse(csabikurvageci);
+                    csabakurva += new string(csabikurvageci) + " ";
+                }
+                csabakurva.Trim();
+                Szoveg_label.Content = csabakurva;
+
+
+            }
+            else
+            {
+                char[] SzovegArray = Szoveg_Input.Text.ToString().ToCharArray();
+                Array.Reverse(SzovegArray);
+                Szoveg_label.Content = new string(SzovegArray);
+            }
+            //Szó
         }
     }
 }
