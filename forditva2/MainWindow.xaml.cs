@@ -58,6 +58,9 @@ namespace forditva2
             char[] SzoArray = Szoveg_Box.SelectedItem.ToString().ToCharArray();
             Array.Reverse(SzoArray); 
             Szo_Label.Content = new string(SzoArray);
+            //kep forditas
+
         }
     }
 }
+
