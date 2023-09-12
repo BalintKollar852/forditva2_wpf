@@ -21,6 +21,7 @@ namespace forditva2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool fordide = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -59,7 +60,9 @@ namespace forditva2
             Array.Reverse(SzoArray); 
             Szo_Label.Content = new string(SzoArray);
             //kep forditas
-
+            Kep.RenderTransformOrigin = new Point(0.5, 0.5);
+            if (fordide) { kepforrotate.ScaleY = -1; fordide = false; }
+            else if (!fordide) { kepforrotate.ScaleY = 1; fordide = true; }
         }
     }
 }
