@@ -24,6 +24,8 @@ namespace forditva2
         public MainWindow()
         {
             InitializeComponent();
+            Szoveg_Box.Items.Add("merev");
+            Szoveg_Box.Items.Add("török");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,6 +55,9 @@ namespace forditva2
                 Szoveg_label.Content = new string(SzovegArray);
             }
             //Szó
+            char[] SzoArray = Szoveg_Box.SelectedItem.ToString().ToCharArray();
+            Array.Reverse(SzoArray); 
+            Szo_Label.Content = new string(SzoArray);
         }
     }
 }
