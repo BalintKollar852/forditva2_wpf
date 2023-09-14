@@ -31,6 +31,7 @@ namespace forditva2
             Szoveg_Box.Items.Add("merev");
             Szoveg_Box.Items.Add("török");
         }
+
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
@@ -69,7 +70,8 @@ namespace forditva2
             Szo_Label.Content = new string(SzoArray);
             //numerikus forditas
             //NumberTextBox Szam_Recpiok
-            Szam_Recpiok.Content = Convert.ToString(1 / Convert.ToDouble(NumberTextBox.Text));
+            try { Szam_Recpiok.Content = Convert.ToString(1 / Convert.ToDouble(NumberTextBox.Text)); }
+            catch(Exception ex) { }
             //kep forditas
             Kep.RenderTransformOrigin = new Point(0.5, 0.5);
             if (fordide) { kepforrotate.ScaleY = -1; fordide = false; }
