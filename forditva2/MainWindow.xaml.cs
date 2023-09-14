@@ -44,17 +44,17 @@ namespace forditva2
             if (Szavankent.IsChecked == true)
             {
 
-                string anyad = Szoveg_Input.Text.ToString();
-                string[] anyad_splitted = anyad.Split(' ');
-                string csabakurva = String.Empty;
-                foreach (var item in anyad_splitted)
+                string szoveginput = Szoveg_Input.Text.ToString();
+                string[] szoveg_splitted = szoveginput.Split(' ');
+                string szovegki = String.Empty;
+                foreach (var item in szoveg_splitted)
                 {
-                    char[] csabikurvageci = item.ToCharArray();
-                    Array.Reverse(csabikurvageci);
-                    csabakurva += new string(csabikurvageci) + " ";
+                    char[] szovegchararray = item.ToCharArray();
+                    Array.Reverse(szovegchararray);
+                    szovegki += new string(szovegchararray) + " ";
                 }
-                csabakurva.Trim();
-                Szoveg_label.Content = csabakurva;
+                szovegki.Trim();
+                Szoveg_label.Content = szovegki;
 
 
             }
