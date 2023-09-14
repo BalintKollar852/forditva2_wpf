@@ -69,8 +69,8 @@ namespace forditva2
             Array.Reverse(SzoArray); 
             Szo_Label.Content = new string(SzoArray);
             //numerikus forditas
-            //NumberTextBox Szam_Recpiok
-            try { Szam_Recpiok.Content = Convert.ToString(1 / Convert.ToDouble(NumberTextBox.Text)); }
+            //NumberTextBox Szam_Reciprok
+            try { Szam_Reciprok.Content = Convert.ToString(1 / Convert.ToDouble(NumberTextBox.Text)); }
             catch(Exception ex) { }
             //kep forditas
             Kep.RenderTransformOrigin = new Point(0.5, 0.5);
