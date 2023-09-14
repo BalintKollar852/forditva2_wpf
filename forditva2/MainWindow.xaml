@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:forditva2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" MinWidth="400" MinHeight="500">
+        Title="Forditó" Height="450" Width="800" MinWidth="400" MinHeight="500" Background="#F0F0F0">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -29,8 +29,8 @@
         <Label x:Name="Szo_forditva" Content="Szó fordítva:" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Width="76"/>
         <Label x:Name="Szo_Label" Content="-" Margin="10,10,10,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1" Height="25"/>
         <Label x:Name="Szam" Content="Szám:" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="26" Width="40"/>
-        <Label Content="Szám recipoka:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="0" Height="25" Width="89"/>
-        <Label x:Name="Szam_Recpiok" Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="15"/>
+        <Label Content="Szám reciproka:" HorizontalAlignment="Left" Margin="5,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="0" Height="25" Width="89"/>
+        <Label x:Name="Szam_Recpiok" Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="594"/>
         <Label Content="Kép:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" Grid.Column="0" Height="26" Width="33"/>
         <TextBox x:Name="Szoveg_Input" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
         <ComboBox x:Name="Szoveg_Box" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Height="22" Margin="0,0,1,0" SelectedIndex="0"/>
@@ -41,6 +41,7 @@
         </Image>
         <CheckBox x:Name="Szavankent" Grid.Column="2" Content="Szavanként:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" IsChecked="False" Height="15" Width="82"/>
         <Button x:Name="ForditvaGomb" Grid.Column="2" Content="Fordítva!" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="7" VerticalAlignment="Top" RenderTransformOrigin="-0.118,-0.246" Width="72" Height="19" Click="Button_Click"/>
-        <ListBox x:Name="Szam_Input" Grid.Column="1" Grid.Row="4" d:ItemsSource="{d:SampleData ItemCount=5}" Height="23" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="NumberTextBox" PreviewTextInput="NumberValidationTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="18,18,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="576"/>
+
     </Grid>
 </Window>

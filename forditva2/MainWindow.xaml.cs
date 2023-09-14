@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
+
 
 namespace forditva2
 {
@@ -27,6 +30,11 @@ namespace forditva2
             InitializeComponent();
             Szoveg_Box.Items.Add("merev");
             Szoveg_Box.Items.Add("török");
+        }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -59,6 +67,9 @@ namespace forditva2
             char[] SzoArray = Szoveg_Box.SelectedItem.ToString().ToCharArray();
             Array.Reverse(SzoArray); 
             Szo_Label.Content = new string(SzoArray);
+            //numerikus forditas
+            //NumberTextBox Szam_Recpiok
+            Szam_Recpiok.Content = Convert.ToString(1 / Convert.ToDouble(NumberTextBox.Text));
             //kep forditas
             Kep.RenderTransformOrigin = new Point(0.5, 0.5);
             if (fordide) { kepforrotate.ScaleY = -1; fordide = false; }
